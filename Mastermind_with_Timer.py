@@ -38,9 +38,9 @@ def listToString(x):
 # defining values
 initial_set = [1, 2, 3, 4, 5, 6]
 random_digits = list(random.sample(initial_set, 4))
-max_guesses = 10
+max_guesses = 7
 num_digits = 4
-t = 120  # time is in seconds
+t = 240  # time is in seconds
 
 # print the instruction
 print("*** Welcome to Mastermind ***")
