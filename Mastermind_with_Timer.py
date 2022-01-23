@@ -5,7 +5,7 @@
 # - W if the digit is correct, but its position is wrong,
 # - G if the digit is wrong.
 # different from the simple version (found in Mastermind.py) here the user can decide whether he/she wants to play
-# with or without the timer with a pre-set time limit. Here it is set on 2 minutes, but one can change it by setting
+# with or without the timer with a pre-set time limit. Here it is set on 4 minutes, but one can change it by setting
 # variable, t (see line 43)
 # Input: number of digits: num_digits, user guess at each turn: user_guess, and maximum number of allowed guesses:
 # max_guesses
