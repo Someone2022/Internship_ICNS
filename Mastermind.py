@@ -40,26 +40,24 @@ num_digits = 4
 
 # print the instruction
 print("*** Welcome to Mastermind ***")
-print("Do you want to start?")
+print("Do you want to start? (Y/N)")
 user_want_play = input()
-if user_want_play == "no":
+if user_want_play == "n" or user_want_play == "N":
     pass
 else:
-    print("The computer has generated a", num_digits, "digits secret code and "
-    "you have", max_guesses, "guesses to find it.", "\n",
-    "Enter", num_digits, "digits between 1 and 6 with spaces." 
-    " (Digits repitition is not allowed.)", "\n", "Guess N:XXXX", "\n",
-    "B = Correct digits in correct place",
-    "\n", "W = Correct digits but in wrong places", "\n", "G = Wrong digit", "\n",
-    "-------------------------------------")
+    print("The computer has generated a", num_digits, "digits secret code and you have",
+          max_guesses, "guesses to find it.", "\n", "Enter", num_digits, "digits between 1 and 6 with spaces." 
+          " (Digits repetition is not allowed.)", "\n", "Guess N:XXXX", "\n", "B = Correct digits in correct place",
+          "\n", "W = Correct digits but in wrong places", "\n", "G = Wrong digit", "\n",
+          "-------------------------------------")
     # Guess 1
-    print("Guess Number 1:")
-    for i in range(1, max_guesses+1):
-        user_guess = list(map(int, list(input().split())))
-        if i == max_guesses:
+    for i in range(1, max_guesses+2):
+        if i == max_guesses+1:
             print("Sorry you have lost. The secret code was:", random_digits, ".")
             break
-        elif user_guess == random_digits:
+        print("Guess Number %s:" % (i))
+        user_guess = list(map(int, list(input().split())))
+        if user_guess == random_digits:
             print("You found the secret code in", i, "turns!")
             break
         # Guess 2 and further
@@ -75,4 +73,4 @@ else:
             print(listToString(feedback[:round(num_digits/2)]))
             print(listToString(feedback[round(num_digits/2):num_digits]))
 
-            print("Guess Number %s:"% (i+1))
+
